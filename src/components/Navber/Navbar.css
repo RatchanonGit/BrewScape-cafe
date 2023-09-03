@@ -1,0 +1,52 @@
+.navbar {
+    display: flex;
+    background-color: #6aa10b;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 70px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.logo{
+    color: white;
+    margin-left: 40px;
+    cursor: pointer;
+}
+a{
+    font-size: 24px;
+}
+
+
+.cart-product{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px; 
+    color: #fff;
+    margin-right: 30px;
+
+}
+
+.badge {
+    background-color: #fff; 
+    color: #6aa10b;
+    border-radius: 50%; 
+    width: 20px; 
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+    margin-left: 10px;
+    font-weight: 600;
+
+}
+
+
+
+
+
+
