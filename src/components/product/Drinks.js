@@ -24,12 +24,9 @@ export default function Drinks(props) {
                 />
             </div>
             <ul className="row">
-                {filterDrinks.map((item) => {
-                    if (item.type === "drinks") {
-                        return card(item);
-                    }
-                }
-                )}
+                {filterDrinks
+                    .filter((item) => item.type === "drinks")
+                    .map((item) => card(item))}
             </ul>
         </div>
     )

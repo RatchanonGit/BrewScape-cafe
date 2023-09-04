@@ -10,8 +10,8 @@ import { useState } from 'react';
 import Cart from './components/Cart/Cart';
 
 
-function App() {
 
+function App() {
 
   const [cart, setcart] = useState([])
 
@@ -79,19 +79,19 @@ function App() {
     setcart(updateProduct)
   }
 
-
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar calculateTotalQuantity={calculateTotalQuantity} cart={cart} />
         <Header />
         <Routes>
-          <Route path='/' element={<Home />}></Route>
+          <Route path='/' element={<Home card={card} />}></Route>
           <Route path='/Drinks' element={<Drinks card={card} />}></Route>
           <Route path='/Desserts' element={<Desserts card={card} />}></Route>
           <Route path='/Others' element={<Others />}></Route>
           <Route path='/Cart' element={<Cart cart={cart} removecart={removecart} calculateTotalPrice={calculateTotalPrice} toggleQuantity={toggleQuantity} />}></Route>
         </Routes>
+
       </BrowserRouter>
 
     </div>

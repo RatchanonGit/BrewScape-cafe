@@ -6,9 +6,9 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     gap: 20px;
-    margin-left: 50px;
+
 }
 
 .card {

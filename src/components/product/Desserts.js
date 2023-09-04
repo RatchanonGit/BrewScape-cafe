@@ -24,12 +24,9 @@ export default function Desserts(props) {
                 />
             </div>
             <ul className="row">
-                {filterDesserts.map((item) => {
-                    if (item.type === "desserts") {
-                         return card(item);
-                    }
-                })
-                }
+                {filterDesserts
+                    .filter((item) => item.type === "desserts")
+                    .map((item) => card(item))}
             </ul>
         </div>
     )
