@@ -24,8 +24,12 @@ export default function Desserts(props) {
                 />
             </div>
             <ul className="row">
+            {filterDesserts
+                    .filter((item) => item.type === "desserts" && item.BestSeller === true)
+                    .map((item) => card(item))}
+
                 {filterDesserts
-                    .filter((item) => item.type === "desserts")
+                    .filter((item) => item.type === "desserts" && item.BestSeller === false)
                     .map((item) => card(item))}
             </ul>
         </div>

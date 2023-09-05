@@ -8,6 +8,11 @@ import Others from './components/product/Others';
 import Home from './components/Home/Home';
 import { useState } from 'react';
 import Cart from './components/Cart/Cart';
+import Footer from './components/function/Footer';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import { toast } from "react-toastify";
+
 
 
 
@@ -16,14 +21,18 @@ function App() {
   const [cart, setcart] = useState([])
 
   const card = (item) => {
+    // ตรวจสอบว่าสินค้าเป็น best seller หรือไม่
+    const BestSeller = item.BestSeller === true;
+
     return (
       <li key={item.id}>
-        <div className="card">
+        <div className={`card ${BestSeller ? 'best-seller' : ''}`}>
+          {BestSeller && <div className="best-seller-badge">Best Seller</div>}
           <img src={item.image} alt={item.name} />
           <div className="card-body">
             <h2>{item.name}</h2>
             <p>{item.price} Baht</p>
-            <button className="btn-cart" onClick={() => addTocart(item)}>
+            <button className="btn-cart" onClick={() => addToCart(item)}>
               Add to Cart
             </button>
           </div>
@@ -32,10 +41,24 @@ function App() {
     );
   };
 
-  const addTocart = (item) => {
-    setcart((cart) => [...cart, item])
-  };
+  const addToCart = (item) => {
+    const isItemInCart = cart.some((cartItem) => cartItem.id === item.id);
+  
+    if (isItemInCart) {
+      toast.warning("This product is already in cart.", {
+        position: "top-center",
+        autoClose: 2000, 
+      });
+    } else {
 
+      setcart((cart) => [...cart, item]);
+      toast.success(`Add ${item.name} to cart.`, {
+        position: "top-center",
+        autoClose: 2000,
+      });
+    }
+  };
+  
   const removecart = (id) => {
     const result = cart.filter(item => item.id !== id)
     setcart(result)
@@ -82,6 +105,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ToastContainer />
         <Navbar calculateTotalQuantity={calculateTotalQuantity} cart={cart} />
         <Header />
         <Routes>
@@ -91,6 +115,7 @@ function App() {
           <Route path='/Others' element={<Others />}></Route>
           <Route path='/Cart' element={<Cart cart={cart} removecart={removecart} calculateTotalPrice={calculateTotalPrice} toggleQuantity={toggleQuantity} />}></Route>
         </Routes>
+        <Footer />
 
       </BrowserRouter>
 

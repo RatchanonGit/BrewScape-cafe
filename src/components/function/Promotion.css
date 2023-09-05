@@ -1,63 +1,96 @@
 .promotion-container {
-    display: flex;
-    align-items: center; /* จัดให้อยู่ตรงกลางตามแนวดิ่ง */
-    justify-content: center; /* จัดให้อยู่ตรงกลางตามแนวนอน */
-    position: relative; /* เพื่อให้สามารถกำหนดตำแหน่งปุ่มได้ */
-  }
-  
-  /* สไลด์เดอร์ */
-  .slick-slider {
-    width: 100%; /* ทำให้ Slider เต็มความกว้างของ container */
-    position: relative; /* เพื่อให้สามารถกำหนดตำแหน่งปุ่มได้ */
-  }
-  
-  /* ปุ่ม "Previous" */
-  .slick-prev {
-    position: absolute; /* ตำแหน่งแบบสัมผัส */
-    left: 10px; /* ระยะห่างด้านซ้าย */
-    top: 50%; /* จัดให้อยู่ตรงกลางตามแนวนอน */
-    transform: translateY(-50%); /* ย้ายขึ้นไปข้างบนเล็กน้อย */
-    z-index: 1; /* ให้ปุ่ม "Previous" อยู่ด้านบนของ Slider */
-    background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลัง */
-    color: white; /* สีข้อความ */
-    border: none; /* ไม่มีเส้นขอบ */
-    border-radius: 50%; /* ทำให้เป็นรูปวงกลม */
-    width: 30px; /* ความกว้าง */
-    height: 30px; /* ความสูง */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  /* ปุ่ม "Next" */
-  .slick-next {
-    position: absolute; /* ตำแหน่งแบบสัมผัส */
-    right: 10px; /* ระยะห่างด้านขวา */
-    top: 50%; /* จัดให้อยู่ตรงกลางตามแนวนอน */
-    transform: translateY(-50%); /* ย้ายขึ้นไปข้างบนเล็กน้อย */
-    z-index: 1; /* ให้ปุ่ม "Next" อยู่ด้านบนของ Slider */
-    background-color: rgba(0, 0, 0, 0.5); /* สีพื้นหลัง */
-    color: white; /* สีข้อความ */
-    border: none; /* ไม่มีเส้นขอบ */
-    border-radius: 50%; /* ทำให้เป็นรูปวงกลม */
-    width: 30px; /* ความกว้าง */
-    height: 30px; /* ความสูง */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  /* ปุ่ม "Previous" และ "Next" ขณะ hover */
-  .slick-prev:hover,
-  .slick-next:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* สีพื้นหลังขณะ hover */
-  }
-  
-  /* ปุ่ม "Previous" และ "Next" ขณะ active (คลิก) */
-  .slick-prev:active,
-  .slick-next:active {
-    background-color: rgba(0, 0, 0, 0.9); /* สีพื้นหลังขณะ active */
-  }
-  
+  display: flex;
+  align-items: center;
+  /* จัดให้อยู่ตรงกลางตามแนวดิ่ง */
+  justify-content: center;
+  /* จัดให้อยู่ตรงกลางตามแนวนอน */
+  position: relative;
+  /* เพื่อให้สามารถกำหนดตำแหน่งปุ่มได้ */
+  margin-left: 20px;
+}
+
+/* สไลด์เดอร์ */
+.slick-slider {
+  width: 100%;
+  /* ทำให้ Slider เต็มความกว้างของ container */
+  position: relative;
+  /* เพื่อให้สามารถกำหนดตำแหน่งปุ่มได้ */
+}
+
+/* ปุ่ม "Previous" */
+.slick-prev {
+  position: absolute;
+  /* ตำแหน่งแบบสัมผัส */
+  left: -10px;
+  /* ระยะห่างด้านซ้าย */
+  top: 50%;
+  /* จัดให้อยู่ตรงกลางตามแนวนอน */
+  transform: translateY(-50%);
+  /* ย้ายขึ้นไปข้างบนเล็กน้อย */
+  z-index: 1;
+  /* ให้ปุ่ม "Previous" อยู่ด้านบนของ Slider */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* สีพื้นหลัง */
+  color: white;
+  /* สีข้อความ */
+  border: none;
+  /* ไม่มีเส้นขอบ */
+  border-radius: 50%;
+  /* ทำให้เป็นรูปวงกลม */
+  width: 30px;
+  /* ความกว้าง */
+  height: 30px;
+  /* ความสูง */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ปุ่ม "Next" */
+.slick-next {
+  position: absolute;
+  /* ตำแหน่งแบบสัมผัส */
+  right: 10px;
+  /* ระยะห่างด้านขวา */
+  top: 50%;
+  /* จัดให้อยู่ตรงกลางตามแนวนอน */
+  transform: translateY(-50%);
+  /* ย้ายขึ้นไปข้างบนเล็กน้อย */
+  z-index: 1;
+  /* ให้ปุ่ม "Next" อยู่ด้านบนของ Slider */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* สีพื้นหลัง */
+  color: white;
+  /* สีข้อความ */
+  border: none;
+  /* ไม่มีเส้นขอบ */
+  border-radius: 50%;
+  /* ทำให้เป็นรูปวงกลม */
+  width: 30px;
+  /* ความกว้าง */
+  height: 30px;
+  /* ความสูง */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ปุ่ม "Previous" และ "Next" ขณะ hover */
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* สีพื้นหลังขณะ hover */
+}
+
+/* ปุ่ม "Previous" และ "Next" ขณะ active (คลิก) */
+.slick-prev:active,
+.slick-next:active {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.slick-slide img {
+  padding-left: 25px;
+}
+

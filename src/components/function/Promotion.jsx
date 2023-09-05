@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import products from '../../data/ProductData'; // นำเข้าข้อมูล products
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 import './Promotion.css'
+import '../product/Product.css'
 
 const Promotion = (props) => {
   const { card } = props;
@@ -31,10 +32,9 @@ const Promotion = (props) => {
   return (
     <div className='promotion-container'>
       <Slider ref={sliderRef} {...settings}>
-        {products.map((product) => (
-          // ส่งข้อมูลของแต่ละรายการไปยัง component card
-          card(product)
-        ))}
+        {products
+          .filter((item) => item.BestSeller === true)
+          .map((item) => card(item))}
       </Slider>
     </div>
   );

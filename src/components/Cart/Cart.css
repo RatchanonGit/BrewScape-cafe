@@ -23,6 +23,8 @@
 
 .product-image{
     margin-right: 50px;
+    object-fit: cover;
+
 }
 
 .product-image img{

@@ -1,5 +1,4 @@
 import products from "../../data/ProductData"
-import "./Drinks.css"
 import { useState, useEffect } from "react"
 
 export default function Drinks(props) {
@@ -25,7 +24,11 @@ export default function Drinks(props) {
             </div>
             <ul className="row">
                 {filterDrinks
-                    .filter((item) => item.type === "drinks")
+                    .filter((item) => item.type === "drinks" && item.BestSeller === true)
+                    .map((item) => card(item))}
+
+                {filterDrinks
+                    .filter((item) => item.type === "drinks" && item.BestSeller === false)
                     .map((item) => card(item))}
             </ul>
         </div>

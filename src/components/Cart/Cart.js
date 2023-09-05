@@ -7,13 +7,13 @@ const Cart = (props) => {
     if ((cart.length) === 0) {
         return (
             <div className="shopping-cart">
-                <div className="empty"> ไม่มีสินค้าในตะกร้า</div>
+                <div className="empty">There are no products in the cart.</div>
             </div>
         )
     } else {
         return (
             <div className="shopping-cart">
-                <div className="title-cart"> สินค้าในตะกร้า</div>
+                <div className="title-cart">Cart</div>
                 <div className="item-cart">
                     {cart.map((data) => {
                         return <CartItem key={data.id} {...data} removecart={removecart}  toggleQuantity={toggleQuantity}/>
