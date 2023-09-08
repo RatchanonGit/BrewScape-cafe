@@ -1,7 +1,7 @@
 import "./Cart.css"
-import plus from '../../image/plus.svg'
-import minus from '../../image/minus.svg'
-import deleteicon from '../../image/delete-icn.svg'
+import plus from '../../../image/plus.svg'
+import minus from '../../../image/minus.svg'
+import deleteicon from '../../../image/delete-icn.svg'
 
 const CartItem = ({ removecart, toggleQuantity, id, name, price, image, quantity }) => {
 

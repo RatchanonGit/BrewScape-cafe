@@ -1,4 +1,4 @@
-import products from "../../data/ProductData"
+import products from "../../../data/ProductData"
 import { useState, useEffect } from "react"
 
 export default function Drinks(props) {

@@ -19,7 +19,7 @@ const Cart = (props) => {
                         return <CartItem key={data.id} {...data} removecart={removecart}  toggleQuantity={toggleQuantity}/>
                     })}
                 </div>
-                <div className="footer">ยอดรวม : {calculateTotalPrice(cart)}</div>
+                <div className="footer">total price : {calculateTotalPrice(cart)}</div>
             </div>
         )
     }

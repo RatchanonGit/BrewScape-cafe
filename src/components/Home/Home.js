@@ -1,8 +1,8 @@
-import ImageSlide from '../function/ImageSlide';
+import ImageSlide from '../Home/Silde/ImageSlide';
 import Slide1 from '../../image/slide1.png'
 import Slide2 from '../../image/slide2.png'
-import Promotion from '../function/Promotion';
-import Advert from '../function/Advert';
+import BestSellerSilde from './Silde/BestSellerSilde';
+import Advert from '../Home/Silde/Advert';
 
 export default function Home(props) {
     const { card } = props
@@ -15,7 +15,7 @@ export default function Home(props) {
             </div>
             <div>
                 <h1 style={{ margin: "50px 0 10px 20px" }}>Best Seller</h1>
-                <Promotion card={card} />
+                <BestSellerSilde card={card} />
             </div>
             <div>
                 <Advert />

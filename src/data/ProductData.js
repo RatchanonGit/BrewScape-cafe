@@ -65,7 +65,7 @@ const products = [
     {
         "id": 7,
         "type": "drinks",
-        "name": "Iced Lemon Green Tea",
+        "name": "Iced Lemon Tea",
         "price": 40,
         "ingredients": ["Green Tea", "Lemon", "Sugar", "Ice"],
         "image": "https://cdn.pixabay.com/photo/2020/03/06/14/34/drinks-4907217_640.jpg",

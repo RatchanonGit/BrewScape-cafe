@@ -13,6 +13,7 @@
     justify-content: center;
     border-bottom: 1px solid #e1e8ee;
 }
+
 .title-cart{
     height: 60px;
     border-bottom: 1px solid #e1e8ee;
@@ -23,20 +24,19 @@
 
 .product-image{
     margin-right: 50px;
-    object-fit: cover;
 
 }
 
 .product-image img{
     width: 120px;
     height: 80px;
+    object-fit: cover;
 }
 
 .footer{
     height: 60px;
     padding: 20px 30px;
     font-size: 25px;
-    font-weight: 800;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -96,7 +96,7 @@
     padding-top:  15px;
     text-align: center;
     font-size: 25px;
-    font-weight: 700;    
+    font-weight: 500;    
 }
 
 .remove{

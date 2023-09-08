@@ -3,12 +3,12 @@ import Slider from 'react-slick';
 //npm install react-slick slick-carousel
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import products from '../../data/ProductData'; // นำเข้าข้อมูล products
+import products from '../../../data/ProductData'; // นำเข้าข้อมูล products
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
-import './Promotion.css'
-import '../product/Product.css'
+import './BestSellerSilde.css'
+import '../../Page/Product/Product.css'
 
-const Promotion = (props) => {
+const Best_seller_silde = (props) => {
   const { card } = props;
   const sliderRef = useRef(null);
 
@@ -40,4 +40,4 @@ const Promotion = (props) => {
   );
 };
 
-export default Promotion;
+export default Best_seller_silde;

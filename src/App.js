@@ -1,27 +1,23 @@
-import './App.css';
-import Navbar from './components/Navber/Navbar';
-import Header from './components/Header/Header';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Desserts from './components/product/Desserts';
-import Drinks from './components/product/Drinks';
-import Others from './components/product/Others';
-import Home from './components/Home/Home';
 import { useState } from 'react';
-import Cart from './components/Cart/Cart';
-import Footer from './components/function/Footer';
+//toastify
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import { toast } from "react-toastify";
-
-
-
+import './App.css';
+//Layout
+import Navbar from './components/Layout/Navber/Navbar';
+import Header from './components/Layout/Header/Header';
+import Footer from './components/Layout/Footer/Footer';
+//Page
+import Desserts from './components/Page/Product/Desserts';
+import Drinks from './components/Page/Product/Drinks';
+import Home from './components/Home/Home';
+import Cart from './components/Page/Cart/Cart';
 
 function App() {
-
   const [cart, setcart] = useState([])
-
   const card = (item) => {
-    // ตรวจสอบว่าสินค้าเป็น best seller หรือไม่
     const BestSeller = item.BestSeller === true;
 
     return (
@@ -43,11 +39,11 @@ function App() {
 
   const addToCart = (item) => {
     const isItemInCart = cart.some((cartItem) => cartItem.id === item.id);
-  
+
     if (isItemInCart) {
       toast.warning("This product is already in cart.", {
         position: "top-center",
-        autoClose: 2000, 
+        autoClose: 2000,
       });
     } else {
 
@@ -58,7 +54,7 @@ function App() {
       });
     }
   };
-  
+
   const removecart = (id) => {
     const result = cart.filter(item => item.id !== id)
     setcart(result)
@@ -112,7 +108,6 @@ function App() {
           <Route path='/' element={<Home card={card} />}></Route>
           <Route path='/Drinks' element={<Drinks card={card} />}></Route>
           <Route path='/Desserts' element={<Desserts card={card} />}></Route>
-          <Route path='/Others' element={<Others />}></Route>
           <Route path='/Cart' element={<Cart cart={cart} removecart={removecart} calculateTotalPrice={calculateTotalPrice} toggleQuantity={toggleQuantity} />}></Route>
         </Routes>
         <Footer />

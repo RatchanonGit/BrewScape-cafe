@@ -1,6 +1,6 @@
 import React from 'react';
-import image3 from '../../image/image3.png'
-import image4 from '../../image/image4.png'
+import image3 from '../../../image/image3.png'
+import image4 from '../../../image/image4.png'
 
 
 const Advert = () => {
