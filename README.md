@@ -2,7 +2,7 @@
 
 Brewscape-cafe is a practice project focused on Frontend development using HTML, CSS, React, and JavaScript. It simulates a beverage and dessert store named "Brewscape Cafe." This project is designed to study and practice the fundamentals of creating and managing a Frontend web application for an online store.
 
-**demo my website :**  https://papaya-haupia-b042e5.netlify.app/
+**demo my website :**  https://startling-bonbon-760bf4.netlify.app/
 
 ## Key Features
 
